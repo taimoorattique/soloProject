@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Counter</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(27, 36, 74);
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+        h3{
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3>HOME</h3>
+            <p id="home-count">0</p>
+            <button id="plus-one" onclick="plusOne(0)">+1</button>
+            <button id="plus-two" onclick="plusTwo(0)">+2</button>
+            <button id="plus-three" onclick="plusThree(0)">+3</button>
+        </div>
+        <div>
+            <h3>GUEST</h3>
+            <p id="guest-count">0</p>
+            <button id="plus-one" onclick="plusOne(1)">+1</button>
+            <button id="plus-two" onclick="plusTwo(1)">+2</button>
+            <button id="plus-three" onclick="plusThree(1)">+3</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        let countHome = 0;
+        let countGuest = 0;
+        let homeDisplay = document.getElementById("home-count");
+        let guestDisplay = document.getElementById("guest-count");
+        
+
+
+        
+        function plusOne(num){
+            
+            if(num === 0){
+                countHome += 1;
+                homeDisplay.innerHTML = countHome;
+            } else {
+                countGuest += 1;
+                guestDisplay.innerHTML = countGuest;
+            }
+        }
+
+        function plusTwo(num){
+            if(num === 0){
+                countHome +=2;
+                homeDisplay.innerHTML = countHome;
+            } else {
+                countGuest += 2;
+                guestDisplay.innerHTML = countGuest;
+            }
+        }
+
+        function plusThree(num){
+            if(num === 0){
+                countHome +=3;
+                homeDisplay.innerHTML = countHome;
+            } else {
+                countGuest += 3;
+                guestDisplay.innerHTML = countGuest;
+            } 
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
